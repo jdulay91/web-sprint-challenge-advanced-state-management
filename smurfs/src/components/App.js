@@ -10,11 +10,11 @@ class App extends Component {
       <div className="App">
         <h1>SMURFS! W/Redux</h1>
         <AddSmurf/>
-        <SmurfList/>     
+        <SmurfList/>    
 
       </div>
     );
   }
 }
 
-export default connect(null, {})(App);
+export default App

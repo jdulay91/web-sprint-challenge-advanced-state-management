@@ -1,14 +1,8 @@
-import {ADD_SMURF} from '../actions'
+import { ADD_SMURF, GET_SMURF } from '../actions'
 
 const initialState ={
-    smurfs:[
-        {
-            name:'',
-            age:'',
-            height:'',
-            id:''
-        }
-    ]
+    smurfs:[],
+    smurf:{}
 }
 
 
@@ -17,12 +11,12 @@ export const rootReducer = (state = initialState,action) => {
         case ADD_SMURF:
             return{
                 ...state,
-                smurfs:[...state.smurfs,{
-                    name:'',
-                    age:'',
-                    height:'',
-                    id:''
-                }]
+                smurf:action.payload                
+            }
+        case GET_SMURF:
+            return{
+                ...state,
+                smurfs:action.payload
             }
         default:
             return state
